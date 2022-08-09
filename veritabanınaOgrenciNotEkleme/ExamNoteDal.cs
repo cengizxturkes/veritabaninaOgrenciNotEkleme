@@ -75,6 +75,22 @@ namespace veritabanınaOgrenciNotEkleme
             _connection.Close();
 
         }
+        public void Delete(int id)
+        {
+
+            if (_connection.State == ConnectionState.Closed)
+            {
+                _connection.Open();
+            }
+            SqlCommand command = new SqlCommand("Delete from StudentNote where Id=@id", _connection);
+          
+            command.Parameters.AddWithValue("@id", id);
+
+            command.ExecuteNonQuery();
+
+            _connection.Close();
+
+        }
     }
 
 }

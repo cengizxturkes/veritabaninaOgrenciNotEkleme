@@ -45,6 +45,7 @@
             this.lblNumberUpdate = new System.Windows.Forms.Label();
             this.lblExamResultUpdate = new System.Windows.Forms.Label();
             this.lblNameUpdate = new System.Windows.Forms.Label();
+            this.btnRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwExamResult)).BeginInit();
             this.gbxAdd.SuspendLayout();
             this.gbxUpdate.SuspendLayout();
@@ -53,7 +54,7 @@
             // dgwExamResult
             // 
             this.dgwExamResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwExamResult.Location = new System.Drawing.Point(12, 12);
+            this.dgwExamResult.Location = new System.Drawing.Point(12, 28);
             this.dgwExamResult.Name = "dgwExamResult";
             this.dgwExamResult.Size = new System.Drawing.Size(458, 150);
             this.dgwExamResult.TabIndex = 0;
@@ -207,11 +208,22 @@
             this.lblNameUpdate.TabIndex = 2;
             this.lblNameUpdate.Text = "Name";
             // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(181, 415);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(127, 23);
+            this.btnRemove.TabIndex = 8;
+            this.btnRemove.Text = "Delete";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 450);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxAdd);
             this.Controls.Add(this.dgwExamResult);
@@ -246,6 +258,7 @@
         private System.Windows.Forms.Label lblNumberUpdate;
         private System.Windows.Forms.Label lblExamResultUpdate;
         private System.Windows.Forms.Label lblNameUpdate;
+        private System.Windows.Forms.Button btnRemove;
     }
 }
 

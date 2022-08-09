@@ -57,5 +57,12 @@ namespace veritabanınaOgrenciNotEkleme
             tbxNumberUpdate.Text=dgwExamResult.CurrentRow.Cells[2].Value.ToString();  
             TbxExamResultUpdate.Text=dgwExamResult.CurrentRow.Cells[3].Value.ToString();  
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgwExamResult.CurrentRow.Cells[0].Value);
+            _examNoteDal.Delete(id);
+            MessageBox.Show("Deleted");
+        }
     }
 }
