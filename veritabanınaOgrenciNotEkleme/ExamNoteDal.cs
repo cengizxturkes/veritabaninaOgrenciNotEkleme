@@ -57,6 +57,24 @@ namespace veritabanınaOgrenciNotEkleme
             _connection.Close();
 
         }
+        public void Update(ExamNote examNote)
+        {
+
+            if (_connection.State == ConnectionState.Closed)
+            {
+                _connection.Open();
+            }
+            SqlCommand command = new SqlCommand("Update StudentNote set Name=@name,Number=@number,ExamResult=@examResult where Id=@id", _connection);
+            command.Parameters.AddWithValue("@name", examNote.Name);
+            command.Parameters.AddWithValue("@number", examNote.Number);
+            command.Parameters.AddWithValue("@examResult", examNote.ExamResult);
+            command.Parameters.AddWithValue("@Id", examNote.Id);
+
+            command.ExecuteNonQuery();
+
+            _connection.Close();
+
+        }
     }
 
 }
