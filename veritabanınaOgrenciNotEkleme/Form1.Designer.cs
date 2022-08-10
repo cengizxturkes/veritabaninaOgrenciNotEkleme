@@ -210,12 +210,14 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(181, 415);
+            this.btnRemove.BackColor = System.Drawing.Color.LightCoral;
+            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemove.Location = new System.Drawing.Point(181, 424);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(127, 23);
             this.btnRemove.TabIndex = 8;
             this.btnRemove.Text = "Delete";
-            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // Form1
